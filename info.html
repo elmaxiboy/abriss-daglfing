@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Party</title>
+  <title>Abriss Daglfing 2.1</title>
   <style>
+
+    @font-face {
+      font-family: 'SK Primo';
+      src: url('skprimo.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
+      font-family: 'SK Primo', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'SK Primo', sans-serif;
-      color: white;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
+      color: white;
     }
 
     .overlay {
+      position: relative;
       background: rgba(0, 0, 0, 0.7);
       padding: 2rem;
       min-height: 100vh;
+      text-align: center;
     }
 
     .logo {
-      max-width: 200px;
-      margin: 2rem auto;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 100px;
+      filter: brightness(0) invert(1);
     }
 
-    .description {
+    h1.title {
+        font-size: 3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow:
+          0 0 5px #fff,
+          0 0 8px #fff,
+          0 0 15px #f0f,
+          0 0 25px #f0f;
+        }
+
+    .subheader {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+      margin-bottom: 2rem;
+      color: #ffffffcc;
+      text-shadow: 2px 2px 8px #000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .description,
+    .info-section {
+      font-family: 'Open Sans', Arial, sans-serif;
       max-width: 600px;
       margin: auto;
-      font-size: 1.2rem;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #ddd;
+      text-align: center;
       padding: 1rem;
     }
 
@@ -43,45 +85,36 @@
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: bold;
+      
     }
 
     .instagram {
       margin-top: 1.5rem;
       font-size: 0.9rem;
+      font-family: 'Open Sans', Arial, sans-serif;
     }
 
     .instagram a {
       color: #ccc;
       text-decoration: none;
+      font-family: 'Open Sans', Arial, sans-serif;
     }
 
     @media (max-width: 600px) {
       .description {
         font-size: 1rem;
       }
+
+      .logo {
+        width: 70px;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      h1.title {
+        font-size: 2rem;
+      }
     }
-
-    .logo {
-        filter: brightness(0) invert(1);
-    }
-
-    .subheader {
-          font-size: 1.8rem;
-          font-weight: 600;
-          margin-top: -1rem;
-          margin-bottom: 2rem;
-          color: #ffffffcc; /* slightly transparent white */
-          text-shadow: 2px 2px 8px #000;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-        }
-
-        @font-face {
-            font-family: 'SK Primo';
-            src: url('SK-Primo.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
 
   </style>
 </head>
@@ -89,18 +122,25 @@
   <div class="overlay">
     <img src="logo.png" alt="Band Logo" class="logo" />
 
+    <h1 class="title">Abriss Daglfing 2<span style="font-family: Arial, sans-serif;">.</span>1</h1>
+
     <h2 class="subheader">EINER IST IMMER DER LOOSER</h2>  
     
     <div class="description">
-      <p>🎉 Join us for an unforgettable night of music and madness! Our band will be performing live at the ultimate summer party. Drinks, lights, friends—and YOU. Don’t miss out!</p>
+      <p>🤘🚨 Join us for an unforgettable night of music and madness! Multiple bands will be performing live in our outdoor and indoor stages. Drinks, lights, friends—and YOU. Don’t miss out!⚡💣</p>
+    </div>
+    <div class="info-section">
+      <p><strong>When:</strong> 2. August</p>
+      <p><strong>Address:</strong> Gnesenerstrasse 1, 81929</p>
+      <p><strong>Gates open at: 15:00</p>
     </div>
 
     <a class="paypal-button" href="https://www.paypal.me/martinengelhardt610" target="_blank">
-      🎟️ Pay 10 € entry here!
+      🎟️ Pay 10 € entry here
     </a>
 
     <div class="instagram">
-      Follow us on <a href="https://www.instagram.com/_vielzutun_?igsh=OHhpMXplYmhjdG4x" target="_blank">@_VielZuTun_</a>
+      Follow us on 📸 at: <a href="https://www.instagram.com/_vielzutun_?igsh=OHhpMXplYmhjdG4x" target="_blank">@_VielZuTun_</a>
     </div>
   </div>
 </body>
