@@ -7,120 +7,128 @@
   <title>Abriss Daglfing 2.1</title>
   <style>
 
-    @font-face {
-      font-family: 'SK Primo';
-      src: url('skprimo.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
+  @font-face {
+    font-family: 'SK Primo';
+    src: url('skprimo.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-    body {
-      font-family: 'SK Primo', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
+  body {
+    font-family: 'SK Primo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
 
-    .overlay {
-      position: relative;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      min-height: 100vh;
-      text-align: center;
-    }
+  .overlay {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    min-height: 100vh;
+    text-align: center;
+  }
 
+
+  .logo-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+    filter: brightness(0) invert(1);
+  }
+
+  h1.title {
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 8px #fff,
+      0 0 15px #f0f,
+      0 0 25px #f0f;
+  }
+
+  .subheader {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: #ffffffcc;
+    text-shadow:
+      0 0 3px #fff,
+      0 0 6px #f0f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .description,
+  .info-section {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 2rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+
+  .paypal-button {
+    margin: 2rem auto;
+    display: inline-block;
+    background: #0070ba;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .instagram {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+
+  .instagram a {
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+
+  @media (max-width: 600px) {
     .logo {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 100px;
-      filter: brightness(0) invert(1);
+      width: 80px;
     }
 
     h1.title {
-        font-size: 3rem;
-        margin-top: 2.5rem;
-        margin-bottom: 1rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        text-shadow:
-          0 0 5px #fff,
-          0 0 8px #fff,
-          0 0 15px #f0f,
-          0 0 25px #f0f;
-        }
+      font-size: 2.2rem;
+    }
 
     .subheader {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-top: 0.2rem;
-      margin-bottom: 2rem;
-      color: #ffffffcc;
-      text-shadow: 2px 2px 8px #000;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 1.3rem;
     }
 
     .description,
     .info-section {
-      font-family: 'Open Sans', Arial, sans-serif;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      color: #ddd;
-      text-align: center;
-      padding: 1rem;
+      font-size: 1rem;
     }
+  }
 
-    .paypal-button {
-      margin: 2rem auto;
-      display: inline-block;
-      background: #0070ba;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      
-    }
+</style>
 
-    .instagram {
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
-      font-family: 'Open Sans', Arial, sans-serif;
-    }
-
-    .instagram a {
-      color: #ccc;
-      text-decoration: none;
-      font-family: 'Open Sans', Arial, sans-serif;
-    }
-
-    @media (max-width: 600px) {
-      .description {
-        font-size: 1rem;
-      }
-
-      .logo {
-        width: 70px;
-        top: 1rem;
-        right: 1rem;
-      }
-
-      h1.title {
-        font-size: 2rem;
-      }
-    }
-
-  </style>
 </head>
 <body>
   <div class="overlay">
-    <img src="logo.png" alt="Band Logo" class="logo" />
+    <div class="logo-container">
+    <img class="logo" src="logo.png" alt="Logo" />
+    </div>
 
     <h1 class="title">Abriss Daglfing 2<span style="font-family: Arial, sans-serif;">.</span>1</h1>
 
