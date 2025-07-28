@@ -3,84 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Multi-Link QR Code Generator</title>
+  <title>Our Party</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-    .link-input {
-      display: flex;
-      margin-bottom: 0.5rem;
-    }
-    .link-input input {
-      flex: 1;
-      padding: 0.5rem;
-    }
-    .link-input button {
-      margin-left: 0.5rem;
-    }
-    #qrcode {
-      margin-top: 2rem;
+      margin: 0;
+      padding: 0;
+      font-family: 'SK Primo', sans-serif;
+      color: white;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
     }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin: 2rem auto;
+    }
+
+    .description {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
+    .paypal-button {
+      margin: 2rem auto;
+      display: inline-block;
+      background: #0070ba;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .instagram {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .instagram a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .description {
+        font-size: 1rem;
+      }
+    }
+
+    .logo {
+        filter: brightness(0) invert(1);
+    }
+
+    .subheader {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-top: -1rem;
+          margin-bottom: 2rem;
+          color: #ffffffcc; /* slightly transparent white */
+          text-shadow: 2px 2px 8px #000;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        @font-face {
+            font-family: 'SK Primo';
+            src: url('SK-Primo.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
   </style>
 </head>
 <body>
-  <h1>QR Code Generator for Multiple Links</h1>
-  <div id="link-list">
-    <div class="link-input">
-      <input type="url" placeholder="Enter a URL" />
-      <button onclick="removeLink(this)">Remove</button>
+  <div class="overlay">
+    <img src="logo.png" alt="Band Logo" class="logo" />
+
+    <h2 class="subheader">EINER IST IMMER DER LOOSER</h2>  
+    
+    <div class="description">
+      <p>🎉 Join us for an unforgettable night of music and madness! Our band will be performing live at the ultimate summer party. Drinks, lights, friends—and YOU. Don’t miss out!</p>
+    </div>
+
+    <a class="paypal-button" href="https://www.paypal.me/martinengelhardt610" target="_blank">
+      🎟️ Pay 10 € entry here!
+    </a>
+
+    <div class="instagram">
+      Follow us on <a href="https://www.instagram.com/_vielzutun_?igsh=OHhpMXplYmhjdG4x" target="_blank">@_VielZuTun_</a>
     </div>
   </div>
-  <button onclick="addLink()">Add Another Link</button>
-  <button onclick="generateQR()">Generate QR Code</button>
-
-  <div id="qrcode"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-  <script>
-    function addLink() {
-      const linkList = document.getElementById('link-list');
-      const div = document.createElement('div');
-      div.className = 'link-input';
-      div.innerHTML = `<input type="url" placeholder="Enter a URL" />
-                       <button onclick="removeLink(this)">Remove</button>`;
-      linkList.appendChild(div);
-    }
-
-    function removeLink(button) {
-      const div = button.parentElement;
-      div.remove();
-    }
-
-    function generateQR() {
-      const inputs = document.querySelectorAll('#link-list input');
-      const links = [];
-      inputs.forEach(input => {
-        if (input.value.trim()) {
-          links.push(input.value.trim());
-        }
-      });
-
-      const qrContainer = document.getElementById('qrcode');
-      qrContainer.innerHTML = "";
-
-      if (links.length === 0) {
-        alert("Please enter at least one link.");
-        return;
-      }
-
-      const data = JSON.stringify({ links });
-      new QRCode(qrContainer, {
-        text: data,
-        width: 256,
-        height: 256
-      });
-    }
-  </script>
 </body>
 </html>
