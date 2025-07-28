@@ -53,7 +53,59 @@
       0 0 8px #fff,
       0 0 15px #f0f,
       0 0 25px #f0f;
-  }
+    animation: neon-flicker 2s infinite alternate;
+    }
+
+    @keyframes neon-flicker {
+      0% {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px #f0f,
+          0 0 20px #f0f,
+          0 0 40px #0ff;
+        opacity: 1;
+      }
+      20% {
+        text-shadow:
+          0 0 2px #fff,
+          0 0 4px #f0f,
+          0 0 8px #f0f,
+          0 0 10px #0ff;
+        opacity: 0.9;
+      }
+      40% {
+        text-shadow:
+          0 0 6px #fff,
+          0 0 12px #f0f,
+          0 0 24px #f0f,
+          0 0 48px #0ff;
+        opacity: 1;
+      }
+      60% {
+        text-shadow:
+          0 0 1px #fff,
+          0 0 2px #f0f,
+          0 0 4px #f0f,
+          0 0 8px #0ff;
+        opacity: 0.8;
+      }
+      80% {
+        text-shadow:
+          0 0 7px #fff,
+          0 0 14px #f0f,
+          0 0 28px #f0f,
+          0 0 56px #0ff;
+        opacity: 1;
+      }
+      100% {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px #f0f,
+          0 0 20px #f0f,
+          0 0 40px #0ff;
+        opacity: 0.95;
+      }
+    }
 
   .subheader {
     font-size: 1.8rem;
